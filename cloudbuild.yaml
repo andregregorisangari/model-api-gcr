@@ -18,4 +18,4 @@ steps:
       - '--allow-unauthenticated'
 images:
   - 'gcr.io/$PROJECT_ID/copra-image:$COMMIT_SHA'
-logsBucket: 'gs://koplak_bucket/logs'
+logsBucket: 'gs://koplak-bucket/logs'
