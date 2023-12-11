@@ -10,14 +10,14 @@ from tensorflow.keras.preprocessing import image as tf_image
 
 
 url = "https://drive.google.com/uc?id=1QAsgzqY-62pWoAh6x4B7vDLOSZ1H0tXG"
-output = './models/model-kopra.h5'
+output = 'model-kopra.h5'
 gdown.download(url, output)
 
 load_dotenv()
 app = Flask(__name__)
 app.config['ALLOWED_EXTENSIONS'] = set(['png', 'jpg', 'jpeg'])
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
-app.config['MODEL_KOPRA'] = './models/model-kopra.h5'
+app.config['MODEL_KOPRA'] = 'model-kopra.h5'
 model_copra = load_model(app.config['MODEL_KOPRA'], compile=False)
 
 def allowed_file(filename):
