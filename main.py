@@ -35,7 +35,7 @@ def predict_grade(image_path):
     predicted_class = np.argmax(result)
 
     # Mapping kelas numerik ke label Grade A, B, atau C
-    class_mapping = {0: 'Grade A', 1: 'Grade B', 2: 'Grade C'}
+    class_mapping = {0: 'A', 1: 'B', 2: 'C'}
     predicted_label = class_mapping[predicted_class]
 
     # Ambil probabilitas prediksi
